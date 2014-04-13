@@ -1,8 +1,8 @@
 .ei-slider{
 	position: relative;
 	width: 100%;
-	max-width: 1920px;
-	height: 400px;
+	max-width: 1280px;
+	height: 500px;
 	margin: 0 auto;
 }
 .ei-slider-loading{
