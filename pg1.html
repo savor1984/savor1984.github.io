@@ -33,7 +33,7 @@
 
 </head>
 
-<body id="ssc" onload="setupZoom()">
+<body id="ssc">
 
 
   <div id="container">
@@ -84,7 +84,9 @@
 
   <!-- Once the page is loaded, initalize the plug-in. -->
   <script type="text/javascript">
-      
+      $(document).ready(function() {
+                        setupZoom();
+                        });
              
        (function ($){
      
