@@ -50,7 +50,7 @@
                 <div id="ei-slider" class="ei-slider">
                     <ul class="ei-slider-large">
                         <li>
-                            <img id="pg1" src="images/large/1.jpg"  alt="image01" style="cursor:pointer;"/>
+                            <img id="pg1" class="pg" src="images/large/1.jpg"  alt="image01" style="cursor:pointer;"/>
                            
                         </li>
                         <li>
@@ -120,8 +120,9 @@
                                           });
               });
 			  
-			  $("#pg1").click(function(){
-				  $("#main").load("pg1.html",function(responseTxt,statusTxt,xhr){
+			  $(".pg").click(function(){
+				  var page=$(this).attr('id');
+				  $("#main").load(page+".html",function(responseTxt,statusTxt,xhr){
 					  $("#main").fadeIn('slow');
 					  if(statusTxt=="success"){
 					  	setupZoom();
