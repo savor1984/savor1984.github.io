@@ -105,7 +105,7 @@
 				  var page = $(this).attr('alt');
 				  var dir = 0;
 				  if(page=='pg1'){
-					  dir = 10;
+					  dir = 2;
 				  }
 				  $("#main").load(page+".html",function(responseTxt,statusTxt,xhr){
 					  $("#main").fadeIn('slow');
@@ -116,11 +116,12 @@
 						    return Math.floor(Math.random() * (500 - 300) + 300);
 						}
 						
+						for(i = 1,i <= dir,i++){
+							$(".tiles").append("<li><a href="images/scale/"+page+"/large/"+i+".jpg"  title="Warsaw"><img src="images/scale/"+page+"/small/"+i+".jpg" width="200" height="283"></a></li>");
+						}
+						
 				        (function ($){
-     
-     
-     
-				         var handler = $('#tiles li');
+						 var handler = $('#tiles li');
  
 				         handler.wookmark({
 				           // Prepare layout options.
