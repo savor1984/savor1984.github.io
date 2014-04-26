@@ -116,8 +116,8 @@
 						    return Math.floor(Math.random() * (500 - 300) + 300);
 						}
 						
-						for(i = 1,i <= dir,i++){
-							$(".tiles").append("<li><a href="images/scale/"+page+"/large/"+i+".jpg"  title="Warsaw"><img src="images/scale/"+page+"/small/"+i+".jpg" width="200" height="283"></a></li>");
+						for(var i = 1;i <= dir;i++){
+							$(".tiles").append('<li><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" width="200" height="283"></a></li>');
 						}
 						
 				        (function ($){
