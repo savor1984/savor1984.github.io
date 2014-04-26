@@ -101,8 +101,9 @@
 			  
 			  $("#pg1").click(function(){
 				  $("#main").load("pg1.html",function(responseTxt,statusTxt,xhr){
-					  $("#main").fadeIn('slow');
-				      
+					  
+					  if(statusTxt=="success")
+					        setupZoom(););
 				      if(statusTxt=="error")
 				        alert("Error: "+xhr.status+": "+xhr.statusText);
 				    });
