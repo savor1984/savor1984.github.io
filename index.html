@@ -13,9 +13,8 @@
                     <link rel="stylesheet" type="text/css" href="css/demo.css" />
                     <link rel="stylesheet" type="text/css" href="css/style.css" />
 				    <link rel="stylesheet" href="css/fancyzoom.css">
-				    <link rel="shortcut icon" href="../favicon.ico">
-				    <link rel="stylesheet" type="text/css" href="css/demo.css" />
-				    <link rel="stylesheet" type="text/css" href="css/style.css" />
+				
+	
 				    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
 				                 
  
@@ -25,8 +24,7 @@
 
 				    <!-- Global CSS for the page and tiles -->
 				    <link rel="stylesheet" href="css/main.css">
-                    
-	              	<script src="js-global/FancyZoom.js" type="text/javascript"></script>
+                    <script src="js-global/FancyZoom.js" type="text/javascript"></script>
 	             	<script src="js-global/FancyZoomHTML.js" type="text/javascript"></script>
 					
                     <noscript>
@@ -123,7 +121,7 @@
 			  
 			  $("#pg1").click(function(){
 				  $("#main").load("pg1.html",function(responseTxt,statusTxt,xhr){
-					  
+					  $("#main").fadeOut();
 					  if(statusTxt=="success"){
 					  	setupZoom();
 				        (function ($){
@@ -144,7 +142,7 @@
 				       // Capture clicks on grid items.
 
        
-				     })(jQuery);
+				     		})(jQuery);
 					  }
 					        
 				      if(statusTxt=="error")
