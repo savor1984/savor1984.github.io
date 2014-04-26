@@ -102,8 +102,7 @@
 			  $("#pg1").click(function(){
 				  $("#main").load("pg1.html",function(responseTxt,statusTxt,xhr){
 					  $("#main").fadeIn('slow');
-				      if(statusTxt=="success")
-				        alert("外部内容加载成功！");
+				      
 				      if(statusTxt=="error")
 				        alert("Error: "+xhr.status+": "+xhr.statusText);
 				    });
