@@ -21,9 +21,15 @@ $(function() {
 			    return Math.floor(Math.random() * (end - start) + start);
 			}
 			
+			
+			
 			for(var i = 1;i <= dir;i++){
-				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" width="200" height="'+rnd(300,400)+'"></a></li>');
+				$("#tiles").append('<li id="photo" style="overflow:hidden;"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" width="200" height="'+rnd(300,400)+'"></a></li>');
 			}
+			
+  		  $("img").load(function(){
+  		    $("#photo").text("Image loaded");
+  		  });
 			
 			setupZoom();
 			
@@ -45,9 +51,7 @@ $(function() {
 	     	})(jQuery);
 		  }
 		  
-		  $("img").load(function(){
-		    $("#photo").text("Image loaded");
-		  });
+		 
 		        
 	      if(statusTxt=="error")
 		  
