@@ -51,6 +51,7 @@ header p {
   display: none; /** Hide items initially to avoid a flicker effect **/
   cursor: pointer;
   padding: 4px;
+  overflow:hidden;
 }
 
 #tiles li.inactive {
