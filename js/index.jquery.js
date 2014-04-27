@@ -17,12 +17,12 @@ $(function() {
 		  if(statusTxt=="success"){
 		  	
 			
-			function rnd(){
-			    return Math.floor(Math.random() * (400 - 300) + 300);
+			function rnd(start,end){
+			    return Math.floor(Math.random() * (end - start) + start);
 			}
 			
 			for(var i = 1;i <= dir;i++){
-				$("#tiles").append('<li><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" width="200" height="'+rnd()+'"></a></li>');
+				$("#tiles").append('<li><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" width="200" height="'+rnd(200,300)+'"></a></li>');
 			}
 			
 			setupZoom();
