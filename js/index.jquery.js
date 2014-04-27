@@ -46,7 +46,7 @@ $(function() {
 		  }
 		  
 		  $("img").load(function(){
-		    $(".photo").text("Image loaded");
+		    $("#photo").text("Image loaded");
 		  });
 		        
 	      if(statusTxt=="error")
