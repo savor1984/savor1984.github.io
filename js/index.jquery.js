@@ -22,7 +22,7 @@ $(function() {
 			}
 			
 			for(var i = 1;i <= dir;i++){
-				$("#tiles").append('<li><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" width="200" height="'+rnd(200,300)+'"></a></li>');
+				$("#tiles").append('<li><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" width="200" height="'+rnd(300,400)+'"></a></li>');
 			}
 			
 			setupZoom();
