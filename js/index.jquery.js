@@ -29,12 +29,12 @@ $(function() {
 			$('#tiles').hide(); 
 		  	
 			for(var i = 1;i <= dir;i++){
-				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;height:270px"></a></li>');
+				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;max-height:400px"></a></li>');
 			}
 			
 			
 			setupZoom();//加载弹出图片方法
-			
+			$('#tiles').fadeIn(2000);
 	        (function ($){
 			 var handler = $('#tiles li');
 
@@ -50,7 +50,7 @@ $(function() {
 	       // Capture clicks on grid items.
 		   
 		     //$('#tiles').show();
-			 $('#tiles').fadeIn(2000);
+			 
 
 	     	})(jQuery);
 		  }
