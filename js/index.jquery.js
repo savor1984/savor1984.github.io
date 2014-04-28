@@ -31,7 +31,7 @@ $(function() {
 				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;max-height:500px;"></a></li>');
 			}
 			
-			$('#tiles').show('slow');
+			
 			setupZoom();//加载弹出图片方法
 			
 	        (function ($){
@@ -48,7 +48,7 @@ $(function() {
 
 	       // Capture clicks on grid items.
 		   
-		     
+		     $('#tiles').show().fadeIn();
 
 
 	     	})(jQuery);
