@@ -20,7 +20,7 @@ $(function() {
 	  
 	  //$('#preloader').after('<div id="preloader" style="visibility:hidden;"></div>').remove();
 	  for(var i = 1;i <= dir;i++){
-		  $("#preloader").append('<img src="images/scale/'+page+'/small/'+i+'.jpg">');
+		  $("#preloader").append('<img src="images/scale/'+page+'/large/'+i+'.jpg">');
 	  }
 	  
 	  $("#main").load(page+".html",function(responseTxt,statusTxt,xhr){
@@ -29,7 +29,7 @@ $(function() {
 			$('#tiles').hide(); 
 		  	
 			for(var i = 1;i <= dir;i++){
-				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;max-height:500px;"></a></li>');
+				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;"></a></li>');
 			}
 			
 			
@@ -50,7 +50,7 @@ $(function() {
 	       // Capture clicks on grid items.
 		   
 		     //$('#tiles').show();
-			 $('#tiles').fadeIn('slow');
+			 $('#tiles').fadeIn(3000);
 
 	     	})(jQuery);
 		  }
