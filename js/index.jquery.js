@@ -30,6 +30,7 @@ $(function() {
 		  	
 			for(var i = 1;i <= dir;i++){
 				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;height:135px"></a></li>');
+				alert($('img').height());
 			}
 			
 			
