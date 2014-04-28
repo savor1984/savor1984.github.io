@@ -18,7 +18,7 @@ $(function() {
 		  dir = 10;//设置目录下照片张数
 	  }
 	  
-	  $('#preloader').after('<div id="preloader" style="visibility:hidden;"></div>').remove();
+	  //$('#preloader').after('<div id="preloader" style="visibility:hidden;"></div>').remove();
 	  for(var i = 1;i <= dir;i++){
 		  $("#preloader").append('<img src="images/scale/'+page+'/small/'+i+'.jpg">');
 	  }
@@ -50,7 +50,7 @@ $(function() {
 	       // Capture clicks on grid items.
 		   
 		     //$('#tiles').show();
-			 $('#tiles').fadeIn();
+			 $('#tiles').fadeIn('slow');
 
 	     	})(jQuery);
 		  }
