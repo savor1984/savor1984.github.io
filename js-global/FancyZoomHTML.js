@@ -68,7 +68,7 @@ function insertZoomHTML() {
 	
 	// In MSIE, we need to put the close box inside the image.
 	// It's 2008 and I'm having to do a browser detect? Sigh.
-	if (browserIsIE) {
+	/**if (browserIsIE) {
 		inClosebox.style.left = '-1px';
 		inClosebox.style.top = '0px';	
 	} else {
@@ -86,7 +86,7 @@ function insertZoomHTML() {
 	inImage2.setAttribute('height','30');
 	inImage2.setAttribute('border','0');
 	inImage2.style.cursor = 'pointer';		
-	inClosebox.appendChild(inImage2);
+	inClosebox.appendChild(inImage2);*/
 	
 	// SHADOW
 	// Only draw the table-based shadow if the programatic webkitBoxShadow fails!
