@@ -20,7 +20,7 @@ $(function() {
 	  
 	  //$('#preloader').after('<div id="preloader" style="visibility:hidden;"></div>').remove();
 	  for(var i = 1;i <= dir;i++){
-		  $("#preloader").append('<img src="images/scale/'+page+'/large/'+i+'.jpg">');
+		  $("#preloader").append('<img src="images/scale/'+page+'/small/'+i+'.jpg">');
 	  }
 	  
 	  $("#main").load(page+".html",function(responseTxt,statusTxt,xhr){
