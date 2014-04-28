@@ -6,27 +6,32 @@ $(function() {
                               });
   });
   
+  function rnd(start,end){
+       return Math.floor(Math.random() * (end - start) + start);
+  }
+  
   $("#pg").click(function(){
+	  
 	  var page = $(this).attr('alt');
 	  var dir = 0;
 	  if(page=='pg1'){
 		  dir = 10;//设置目录下照片张数
 	  }
+	  $('#preloader').after('<div id="preloader" style="visibility:hidden;"></div>').remove();
+	  for(var i = 1;i <= dir;i++){
+		  $("#preloader").append('<img src="images/scale/'+page+'/small/'+i+'.jpg">');
+	  }
+	  
 	  $("#main").load(page+".html",function(responseTxt,statusTxt,xhr){
-		  $("#main").fadeIn('slow');
+		  
 		  if(statusTxt=="success"){
+			$('#tiles').hide(); 
 		  	
-			
-			function rnd(start,end){
-			    return Math.floor(Math.random() * (end - start) + start);
-			}
-			
-			
-			
 			for(var i = 1;i <= dir;i++){
 				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;max-height:500px;"></a></li>');
 			}
 			
+			$('#tiles').show('slow');
 			setupZoom();//加载弹出图片方法
 			
 	        (function ($){
@@ -42,6 +47,8 @@ $(function() {
 	         });
 
 	       // Capture clicks on grid items.
+		   
+		     
 
 
 	     	})(jQuery);
