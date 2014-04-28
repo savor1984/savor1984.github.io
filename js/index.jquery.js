@@ -29,8 +29,8 @@ $(function() {
 			$('#tiles').hide(); 
 		  	
 			for(var i = 1;i <= dir;i++){
-				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;max-height:500px"></a></li>');
-				alert($('img').height());
+				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img id='+page+' src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;max-height:500px;"></a></li>');
+				alert($('#'+page).height());
 			}
 			
 			
