@@ -30,12 +30,15 @@ $(function() {
 		  	
 			for(var i = 1;i <= dir;i++){
 				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img id='+i+' src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;max-height:500px;"></a></li>');
-				alert($('#'+i).src);
+				
 			}
 			
 			
 			setupZoom();//加载弹出图片方法
 			$('#tiles').fadeIn(2000);
+			for(var i = 1;i <= dir;i++){
+				alert($('#'+i).src);
+			}
 	        (function ($){
 			 var handler = $('#tiles li');
 
