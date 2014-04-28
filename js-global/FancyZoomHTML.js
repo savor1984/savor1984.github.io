@@ -72,7 +72,7 @@ function insertZoomHTML() {
 		inClosebox.style.left = '-1px';
 		inClosebox.style.top = '0px';	
 	} else {
-		inClosebox.style.left = '-15px';
+		inClosebox.style.right = '-15px'; //left
 		inClosebox.style.top = '-15px';
 	}
 	
