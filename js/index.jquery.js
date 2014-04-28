@@ -49,8 +49,8 @@ $(function() {
 
 	       // Capture clicks on grid items.
 		   
-		     //$('#tiles').show().fadeIn();
-
+		     //$('#tiles').show();
+			 $('#tiles').fadeIn();
 
 	     	})(jQuery);
 		  }
