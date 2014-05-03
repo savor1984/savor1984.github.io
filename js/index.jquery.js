@@ -15,6 +15,7 @@ $(function() {
 	  $("#loadgif").show();
 	  $("#loadgif").append('<img src="images/ajaxloading.GIF"/>');
     });
+	
   $("#main").ajaxComplete(function(){
 	  $("#loadgif").hide();
       $("#main").show();
@@ -51,7 +52,7 @@ $(function() {
 			$('#tiles img').each(function () {
 				function imageLoading() {
 					msg = "Image: " + this.src + "....done";
-					console.log(msg);
+					//console.log(msg);
 					imgCount--;
 					handler.wookmark({
 	   	           	 // Prepare layout options.
