@@ -58,6 +58,7 @@ $(function() {
 	   		     //$('#tiles').show();
 					if(imgCount===0){
 						console.log("all done");
+						$('#tiles').fadeIn(2000);
 					}
 				}
 				
@@ -70,7 +71,7 @@ $(function() {
 			
 			
 			setupZoom();//加载弹出图片方法
-			$('#tiles').fadeIn(5000);
+			
 		
 		  }
 		  if(statusTxt=="error")
