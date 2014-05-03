@@ -55,6 +55,7 @@ $(function() {
 				function imageLoading() {
 					msg = "Image: " + this.src + "....done";
 					//console.log(msg);
+					$(this).fadeIn(2000);
 					imgCount--;
 					handler.wookmark({
 	   	           	 // Prepare layout options.
@@ -64,7 +65,7 @@ $(function() {
 	   	           		outerOffset: 10, // Optional, the distance to the containers border
 	   	           		itemWidth: 210 // Optional, the width of a grid item
 	   	         	});
-					$(this).fadeIn(2000);
+					
 
 	   	       // Capture clicks on grid items.
 		   
