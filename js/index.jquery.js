@@ -39,10 +39,10 @@ $(function() {
 			$('#tiles img').each(function () {
 				
 					msg = "Image: " + this.src + "....done";
-					console.msg(msg);
+					console.log(msg);
 					imgCount--;
 					if(imgCount===0){
-						console.msg("all done");
+						console.log("all done");
 					}
 				
 			});
