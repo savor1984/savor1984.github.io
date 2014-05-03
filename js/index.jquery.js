@@ -13,7 +13,7 @@ $(function() {
   $("#main").ajaxStart(function(){
       $("#main").hide();
 	  $("#loadgif").show();
-	  $("#loadgif").append('<img src="images/ajaxloading.GIF"/>');
+	  //$("#loadgif").append('<img src="images/ajaxloading.GIF"/>');
     });
 	
   $("#main").ajaxComplete(function(){
