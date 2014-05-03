@@ -46,10 +46,10 @@ $(function() {
 					}
 				}
 				
-				if($(this).complete;){
+				if(this.complete;){
 					imageLoaded.call(this);
 				}else{
-					$(this).one('load', ImageLoading);
+					this.one('load', ImageLoading);
 				}
 			
 			});
