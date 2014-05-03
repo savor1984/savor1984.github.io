@@ -26,7 +26,7 @@ $(function() {
 	  $("#main").load(page+".html",function(responseTxt,statusTxt,xhr){
 		  
 		  if(statusTxt=="success"){
-			//$('#tiles').hide(); 
+			$('#tiles').hide(); 
 		  	
 			for(var i = 1;i <= dir;i++){
 				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;max-height:500px;"></a></li>');
@@ -43,16 +43,15 @@ $(function() {
 					msg = "Image: " + this.src + "....done";
 					console.log(msg);
 					imgCount--;
-					
-	   	         	handler.wookmark({
-	   	           // Prepare layout options.
-	   	           autoResize: true, // This will auto-update the layout when the browser window is resized.
-	   	           container: $('#mainpg1'), // Optional, used for some extra CSS styling
-	   	           offset: 5, // Optional, the distance between grid items
-	   	           outerOffset: 10, // Optional, the distance to the containers border
-	   	           itemWidth: 210 // Optional, the width of a grid item
+					handler.wookmark({
+	   	           	 // Prepare layout options.
+	   	           		autoResize: true, // This will auto-update the layout when the browser window is resized.
+	   	           		container: $('#mainpg1'), // Optional, used for some extra CSS styling
+	   	           		offset: 5, // Optional, the distance between grid items
+	   	           		outerOffset: 10, // Optional, the distance to the containers border
+	   	           		itemWidth: 210 // Optional, the width of a grid item
 	   	         	});
-					$(this).fadeIn(1000);
+					$(this).fadeIn(2000);
 
 	   	       // Capture clicks on grid items.
 		   
@@ -71,15 +70,10 @@ $(function() {
 			
 			
 			setupZoom();//加载弹出图片方法
-			//$('#tiles').fadeIn(2000);
+			$('#tiles').fadeIn(5000);
 		
 		  }
-		  
-		  
-		  
-		 
-		        
-	      if(statusTxt=="error")
+		  if(statusTxt=="error")
 		  	alert("Error: "+xhr.status+": "+xhr.statusText);
 	    });
   });
