@@ -33,8 +33,11 @@ $(function() {
 				
 			}
 			
+			var imglen = $("#tiles img").length();
+			console.log(imglen);
 			
 			setupZoom();//加载弹出图片方法
+			
 			$('#tiles').fadeIn(2000);
 			
 	        (function ($){
