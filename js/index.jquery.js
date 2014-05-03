@@ -46,11 +46,7 @@ $(function() {
 					}
 				}
 				
-				if($(element).complete;){
-					imageLoaded.call(element);
-				}else{
-					$(element).one('load', ImageLoading);
-				}
+
 			
 			});
 			
