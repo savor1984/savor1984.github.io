@@ -33,8 +33,8 @@ $(function() {
 				
 			}
 			
-			
-			console.log($("#tiles img"));
+			var imgCount = $('#tiles img').length;
+			console.log(imgCount);
 			
 			setupZoom();//加载弹出图片方法
 			
