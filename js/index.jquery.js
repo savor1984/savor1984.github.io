@@ -49,7 +49,7 @@ $(function() {
 				if(this.complete){
 					imageLoading.call(this);
 				}else{
-					this.one('load', imageLoading);
+					$(this).one('load',imageLoading);
 				}
 			});
 			
