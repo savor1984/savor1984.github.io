@@ -36,9 +36,9 @@ $(function() {
 			var imgCount = $('#tiles img').length;
 			console.log(imgCount);
 			
-			$('#tiles img').each(function () {
+			$('#tiles img').each(function (index,element) {
 				function ImageLoading() {
-					msg = "Image: " + this.src + "....done";
+					msg = "Image: " + element.src + "....done";
 					console.msg(msg);
 					imgCount--;
 					if(imgCount==0){
@@ -46,10 +46,10 @@ $(function() {
 					}
 				}
 				
-				if($(this).complete;){
-					imageLoaded.call(this);
+				if($(element).complete;){
+					imageLoaded.call(element);
 				}else{
-					$(this).one('load', ImageLoading);
+					$(element).one('load', ImageLoading);
 				}
 			
 			});
