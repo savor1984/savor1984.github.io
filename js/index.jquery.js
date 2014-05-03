@@ -34,17 +34,17 @@ $(function() {
 			}
 			
 			var imgCount = $('#tiles img').length;
-			console.log(imgCount);
+			
 			
 			$('#tiles img').each(function () {
-				function ImageLoading() {
+				
 					msg = "Image: " + this.src + "....done";
 					console.msg(msg);
 					imgCount--;
-					if(imgCount==0){
+					if(imgCount===0){
 						console.msg("all done");
 					}
-				}
+				
 			});
 			
 			
