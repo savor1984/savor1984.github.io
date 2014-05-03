@@ -46,7 +46,7 @@ $(function() {
 					}
 				}
 				
-				if(this.complete){
+				if($(this).complete){
 					imageLoading.call(this);
 				}else{
 					$(this).one('load',imageLoading);
@@ -56,7 +56,7 @@ $(function() {
 			
 			setupZoom();//加载弹出图片方法
 			
-			$('#tiles').fadeIn(2000);
+			
 			
 	        (function ($){
 			 var handler = $('#tiles li');
@@ -77,6 +77,8 @@ $(function() {
 
 	     	})(jQuery);
 		  }
+		  
+		  $('#tiles').fadeIn(2000);
 		  
 		 
 		        
