@@ -36,22 +36,15 @@ $(function() {
 			var imgCount = $('#tiles img').length;
 			console.log(imgCount);
 			
-			$('#tiles img').each(function (index,element) {
+			$('#tiles img').each(function () {
 				function ImageLoading() {
-					msg = "Image: " + element.src + "....done";
+					msg = "Image: " + this.src + "....done";
 					console.msg(msg);
 					imgCount--;
 					if(imgCount==0){
 						console.msg("all done");
 					}
 				}
-				
-				if($('element').complete;){
-					imageLoaded.call(element);
-				}else{
-					$('element').one('load', ImageLoading);
-				}
-			
 			});
 			
 			
