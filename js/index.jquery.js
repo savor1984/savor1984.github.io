@@ -11,12 +11,14 @@ $(function() {
   }
   
   $("#main").ajaxStart(function(){
+	  console.log("ajaxstart");
       $("#main").hide();
 	  $("#loadgif").show();
 	  //$("#loadgif").append('<img src="images/ajaxloading.GIF"/>');
     });
 	
   $("#main").ajaxComplete(function(){
+	  console.log("ajaxend");
 	  $("#loadgif").hide();
       $("#main").show();
   });
