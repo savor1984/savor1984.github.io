@@ -37,7 +37,7 @@ $(function() {
 			
 			
 			$('#tiles img').each(function () {
-				function ImageLoading() {
+				function imageLoading() {
 					msg = "Image: " + this.src + "....done";
 					console.log(msg);
 					imgCount--;
@@ -47,7 +47,7 @@ $(function() {
 				}
 				
 				if(this.complete){
-					imageLoaded.call(this);
+					imageLoading.call(this);
 				}else{
 					this.one('load', ImageLoading);
 				}
