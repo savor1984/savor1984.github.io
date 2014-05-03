@@ -13,6 +13,17 @@ $(function() {
 
   
   $("#pg").click(function(){
+
+	  var page = $(this).attr('alt');
+	  var dir = 0;
+	  if(page=='pg1'){
+		  dir = 10;//设置目录下照片张数
+	  }
+	  
+	  //$('#preloader').after('<div id="preloader" style="visibility:hidden;"></div>').remove();
+	  for(var i = 1;i <= dir;i++){
+		  $("#preloader").append('<img src="images/scale/'+page+'/large/'+i+'.jpg">');
+	  }
 	  $("#main").ajaxStart(function(){
 		  console.log("ajaxstart");
 	      $("#main").hide();
@@ -25,17 +36,6 @@ $(function() {
 		  $("#loadgif").hide();
 	      $("#main").show();
 	  });
-	  var page = $(this).attr('alt');
-	  var dir = 0;
-	  if(page=='pg1'){
-		  dir = 10;//设置目录下照片张数
-	  }
-	  
-	  //$('#preloader').after('<div id="preloader" style="visibility:hidden;"></div>').remove();
-	  for(var i = 1;i <= dir;i++){
-		  $("#preloader").append('<img src="images/scale/'+page+'/large/'+i+'.jpg">');
-	  }
-	  
 	  $("#main").load(page+".html",function(responseTxt,statusTxt,xhr){
 		  
 		  if(statusTxt=="success"){
