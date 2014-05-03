@@ -10,6 +10,13 @@ $(function() {
        return Math.floor(Math.random() * (end - start) + start);
   }
   
+  $("#main").ajaxStart(function(){
+      $("#main").hide();
+    });
+  $("#main").ajaxComplete(function(){
+      $("#main").show();
+  });
+  
   $("#pg").click(function(){
 	  
 	  var page = $(this).attr('alt');
