@@ -35,14 +35,27 @@ $(function() {
 			
 			
 			
-			$('#tiles img').hide();
+			
 			var imgCount = $('#tiles img').length;
+			var handler = $('#tiles li');
 			$('#tiles img').each(function () {
 				function imageLoading() {
 					msg = "Image: " + this.src + "....done";
 					console.log(msg);
 					imgCount--;
-					$(this).fadeIn(100);
+					
+	   	         	handler.wookmark({
+	   	           // Prepare layout options.
+	   	           autoResize: true, // This will auto-update the layout when the browser window is resized.
+	   	           container: $('#mainpg1'), // Optional, used for some extra CSS styling
+	   	           offset: 5, // Optional, the distance between grid items
+	   	           outerOffset: 10, // Optional, the distance to the containers border
+	   	           itemWidth: 210 // Optional, the width of a grid item
+	   	         	});
+
+	   	       // Capture clicks on grid items.
+		   
+	   		     //$('#tiles').show();
 					if(imgCount===0){
 						console.log("all done");
 					}
@@ -57,35 +70,10 @@ $(function() {
 			
 			
 			setupZoom();//加载弹出图片方法
-			
-			
-			
-	        (function ($){
-			 var handler = $('#tiles li');
-
-	         handler.wookmark({
-	           // Prepare layout options.
-	           autoResize: true, // This will auto-update the layout when the browser window is resized.
-	           container: $('#mainpg1'), // Optional, used for some extra CSS styling
-	           offset: 5, // Optional, the distance between grid items
-	           outerOffset: 10, // Optional, the distance to the containers border
-	           itemWidth: 210 // Optional, the width of a grid item
-	         });
-
-	       // Capture clicks on grid items.
-		   
-		     //$('#tiles').show();
-			 
-
-	     	})(jQuery);
+			$('#tiles').fadeIn(2000);
+		
 		  }
-		  
-		  $('#tiles').fadeIn(2000);
-		  
-		 
-		        
-	      if(statusTxt=="error")
-		  
-	        alert("Error: "+xhr.status+": "+xhr.statusText);
+		  if(statusTxt=="error")
+		  	alert("Error: "+xhr.status+": "+xhr.statusText);
 	    });
   });
