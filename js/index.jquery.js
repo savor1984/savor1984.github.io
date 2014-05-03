@@ -36,6 +36,24 @@ $(function() {
 			var imgCount = $('#tiles img').length;
 			console.log(imgCount);
 			
+			$('#tiles img').each(function () {
+				function ImageLoading() {
+					msg = "Image: " + this.src + "....done";
+					console.msg(msg);
+					imgCount--;
+					if(imgCount==0){
+						console.msg("all done");
+					}
+				}
+				
+				if($this.complete;){
+					imageLoaded.call(this);
+				}else{
+					$(this).one('load', ImageLoading);
+				}
+			
+			});
+			
 			setupZoom();//加载弹出图片方法
 			
 			$('#tiles').fadeIn(2000);
