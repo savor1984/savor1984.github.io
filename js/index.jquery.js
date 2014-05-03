@@ -12,8 +12,11 @@ $(function() {
   
   $("#main").ajaxStart(function(){
       $("#main").hide();
+	  $("#loadgif").show();
+	  
     });
   $("#main").ajaxComplete(function(){
+	  $("#loadgif").hide();
       $("#main").show();
   });
   
