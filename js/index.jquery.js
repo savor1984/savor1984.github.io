@@ -26,7 +26,7 @@ $(function() {
 	  $("#main").load(page+".html",function(responseTxt,statusTxt,xhr){
 		  
 		  if(statusTxt=="success"){
-			$('#tiles').hide(); 
+			//$('#tiles').hide(); 
 		  	
 			for(var i = 1;i <= dir;i++){
 				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;max-height:500px;"></a></li>');
@@ -35,7 +35,7 @@ $(function() {
 			
 			
 			
-			
+			$('#tiles img').hide();
 			var imgCount = $('#tiles img').length;
 			var handler = $('#tiles li');
 			$('#tiles img').each(function () {
@@ -52,6 +52,7 @@ $(function() {
 	   	           outerOffset: 10, // Optional, the distance to the containers border
 	   	           itemWidth: 210 // Optional, the width of a grid item
 	   	         	});
+					$(this).fadeIn(1000);
 
 	   	       // Capture clicks on grid items.
 		   
@@ -70,10 +71,15 @@ $(function() {
 			
 			
 			setupZoom();//加载弹出图片方法
-			$('#tiles').fadeIn(2000);
+			//$('#tiles').fadeIn(2000);
 		
 		  }
-		  if(statusTxt=="error")
+		  
+		  
+		  
+		 
+		        
+	      if(statusTxt=="error")
 		  	alert("Error: "+xhr.status+": "+xhr.statusText);
 	    });
   });
