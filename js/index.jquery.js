@@ -26,7 +26,7 @@ $(function() {
 	  $("#main").load(page+".html",function(responseTxt,statusTxt,xhr){
 		  
 		  if(statusTxt=="success"){
-			$('#tiles').hide(); 
+			//$('#tiles').hide(); 
 		  	
 			for(var i = 1;i <= dir;i++){
 				$("#tiles").append('<li id="photo"><a href="images/scale/'+page+'/large/'+i+'.jpg"  title=""><img src="images/scale/'+page+'/small/'+i+'.jpg" style="width:200px;max-height:500px;"></a></li>');
@@ -58,7 +58,7 @@ $(function() {
 	   		     //$('#tiles').show();
 					if(imgCount===0){
 						console.log("all done");
-						$('#tiles').fadeIn(2000);
+						
 					}
 				}
 				
@@ -71,7 +71,7 @@ $(function() {
 			
 			
 			setupZoom();//加载弹出图片方法
-			
+			//$('#tiles').fadeIn(2000);
 		
 		  }
 		  if(statusTxt=="error")
