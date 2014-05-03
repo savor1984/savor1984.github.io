@@ -33,14 +33,16 @@ $(function() {
 				
 			}
 			
+			
+			
+			$('#tiles img').hide();
 			var imgCount = $('#tiles img').length;
-			
-			
 			$('#tiles img').each(function () {
 				function imageLoading() {
 					msg = "Image: " + this.src + "....done";
 					console.log(msg);
 					imgCount--;
+					$(this).fadeIn(100);
 					if(imgCount===0){
 						console.log("all done");
 					}
