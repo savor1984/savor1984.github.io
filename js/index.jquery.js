@@ -73,6 +73,8 @@ $(function() {
 	   		     //$('#tiles').show();
 					if(imgCount===0){
 						console.log("all done");
+			    		  $("#loadgif").hide();
+			    	      $("#main").show();
 						
 					}
 				}
@@ -87,8 +89,7 @@ $(function() {
 			
 			setupZoom();//加载弹出图片方法
 			//$('#tiles').fadeIn(2000);
-  		  $("#loadgif").hide();
-  	      $("#main").show();
+  		  
 		  }
 		  if(statusTxt=="error")
 		  	alert("Error: "+xhr.status+": "+xhr.statusText);
