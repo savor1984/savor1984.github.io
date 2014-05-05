@@ -49,6 +49,7 @@ h1 span{
 }
 /* Header Style */
 .header{
+	position:relative;
 	font-family:"Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
 	font-size: 10px;
 	margin: 0 auto;
